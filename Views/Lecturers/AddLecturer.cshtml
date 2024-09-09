@@ -1,0 +1,15 @@
+@model LecturerViewModel
+
+<h2>Add Lecturer</h2>
+
+<form asp-action="AddLecturer" method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Subject"></label>
+        <input asp-for="Subject" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Add Lecturer</button>
+</form>

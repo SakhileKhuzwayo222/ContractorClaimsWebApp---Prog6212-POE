@@ -1,0 +1,28 @@
+@model IEnumerable<LecturerViewModel>
+
+    <h2>View Lecturers</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var lecturer in Model)
+        {
+            <tr>
+                <td>@lecturer.LecturerId</td>
+                <td>@lecturer.Name</td>
+                <td>@lecturer.Subject</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@lecturer.LecturerId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@lecturer.LecturerId">Delete</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>

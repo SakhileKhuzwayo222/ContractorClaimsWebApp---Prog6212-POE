@@ -1,0 +1,16 @@
+@model Contractor_Claims.Models.Lecturer
+
+<h2>Delete Lecturer</h2>
+
+<p>Are you sure you want to delete this lecturer?</p>
+
+<div>
+    <p><strong>Name:</strong> @Model.Name</p>
+    <p><strong>Department:</strong> @Model.Department</p>
+    <p><strong>Email:</strong> @Model.Email</p>
+</div>
+
+<form method="post" action="@Url.Action("DeleteLecturer", new { id = Model.LecturerId })">
+    <input type="submit" value="Delete" />
+    <a href="@Url.Action("ViewLecturers")">Cancel</a>
+</form>

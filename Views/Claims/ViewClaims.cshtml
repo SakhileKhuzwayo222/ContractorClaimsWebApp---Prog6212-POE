@@ -1,0 +1,28 @@
+@model IEnumerable<ClaimViewModel>
+
+    <h2>View Claims</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Amount</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var claim in Model)
+        {
+            <tr>
+                <td>@claim.ClaimId</td>
+                <td>@claim.Amount</td>
+                <td>@claim.Description</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@claim.ClaimId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@claim.ClaimId">Delete</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>

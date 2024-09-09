@@ -2,7 +2,7 @@
 using System.Linq; // For LINQ methods like FirstOrDefault
 using Contractor_Claims.Models; // Adjust to your Models namespace
 
-namespace ContractorClaimsProg6212POE.Services
+namespace Contractor_Claims.Services
 {
     public class LecturerService : ILecturerService
     {

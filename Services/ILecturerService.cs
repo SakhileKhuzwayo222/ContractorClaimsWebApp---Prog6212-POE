@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Contractor_Claims.Models; // Adjust to your Models namespace
 
-namespace ContractorClaimsProg6212POE.Services
+namespace Contractor_Claims.Services
 {
     public interface ILecturerService
     {

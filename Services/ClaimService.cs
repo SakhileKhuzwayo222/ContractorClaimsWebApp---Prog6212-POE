@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace YourProjectNamespace.Services // Adjust the namespace to match your project structure
+namespace Contractor_Claims.Services // Adjust the namespace to match your project structure
 {
     public class ClaimService : IClaimService
     {

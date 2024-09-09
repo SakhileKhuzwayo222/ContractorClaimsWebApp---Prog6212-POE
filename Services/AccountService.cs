@@ -12,7 +12,7 @@ namespace Contractor_Claims.Services
         {
             _context = context;
         }
-
+       
         public void CreateAccount(Account account)
         {
             _context.Accounts.Add(account);

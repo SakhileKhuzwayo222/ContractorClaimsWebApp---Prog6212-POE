@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using YourProjectNamespace.Models; // Adjust according to your models' namespace
-using YourProjectNamespace.Services; // Adjust according to your services' namespace
+using Contractor_Claims.Models; // Adjust according to your models' namespace
+using Contractor_Claims.Services; // Adjust according to your services' namespace
+
 
 public class ClaimController : Controller
 {

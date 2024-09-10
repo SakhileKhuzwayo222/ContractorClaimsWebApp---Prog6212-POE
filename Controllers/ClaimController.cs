@@ -22,7 +22,7 @@ public class ClaimController : Controller
     {
         if (ModelState.IsValid)
         {
-            _claimService.SaveClaim(claim, supportingDocument); // Implement SaveClaim method in service
+            _claimService.SaveClaim(claim, supportingDocument);
             return RedirectToAction("ViewClaims");
         }
         return View(claim);

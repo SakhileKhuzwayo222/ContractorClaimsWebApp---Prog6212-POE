@@ -18,9 +18,9 @@ namespace Contractor_Claims.Services
             return _lecturers;
         }
 
-        public Lecturer? GetLecturerById(int id)
+        public Lecturer GetLecturerById(string id)
         {
-            return _lecturers.FirstOrDefault(l => l.Id == id);
+            return _lecturers.FirstOrDefault(l => l.Id == id) ?? throw new KeyNotFoundException($"Lecturer with id {id} not found.");
         }
 
         public void UpdateLecturer(Lecturer lecturer)

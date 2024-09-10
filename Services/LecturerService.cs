@@ -18,17 +18,21 @@ namespace Contractor_Claims.Services
             return _lecturers;
         }
 
-        public Lecturer GetLecturerById(int id)
+        public Lecturer? GetLecturerById(int id)
         {
-            return _lecturers.FirstOrDefault(l => l.Id == id); // Assuming Lecturer has an Id property
+            return _lecturers.FirstOrDefault(l => l.Id == id);
         }
 
         public void UpdateLecturer(Lecturer lecturer)
         {
-            // Logic to update a lecturer
+            var index = _lecturers.FindIndex(l => l.Id == lecturer.Id);
+            if (index != -1)
+            {
+                _lecturers[index] = lecturer;
+            }
         }
 
-        public void DeleteLecturer(int id)
+        public void DeleteLecturer(string id)
         {
             var lecturer = _lecturers.FirstOrDefault(l => l.Id == id);
             if (lecturer != null)

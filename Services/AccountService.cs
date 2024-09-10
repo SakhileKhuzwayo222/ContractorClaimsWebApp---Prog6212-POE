@@ -1,6 +1,5 @@
-using System.Collections.Generic;
-using System.Linq;
 using Contractor_Claims.Models;
+using Contractor_Claims.Data;
 
 namespace Contractor_Claims.Services
 {

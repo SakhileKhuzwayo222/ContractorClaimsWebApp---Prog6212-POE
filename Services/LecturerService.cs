@@ -18,9 +18,9 @@ namespace Contractor_Claims.Services
             return _lecturers;
         }
 
-        public Lecturer GetLecturerById(string id)
+        public Lecturer GetLecturerById(int id)
         {
-            return _lecturers.FirstOrDefault(l => l.Id == id) ?? throw new KeyNotFoundException($"Lecturer with id {id} not found.");
+            return _lecturers.FirstOrDefault(l => l.Id == id.ToString()) ?? throw new KeyNotFoundException($"Lecturer with id {id} not found.");
         }
 
         public void UpdateLecturer(Lecturer lecturer)
@@ -32,9 +32,9 @@ namespace Contractor_Claims.Services
             }
         }
 
-        public void DeleteLecturer(string id)
+        public void DeleteLecturer(int id)
         {
-            var lecturer = _lecturers.FirstOrDefault(l => l.Id == id);
+            var lecturer = _lecturers.FirstOrDefault(l => l.Id == id.ToString());
             if (lecturer != null)
             {
                 _lecturers.Remove(lecturer);

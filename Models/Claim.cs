@@ -9,6 +9,9 @@
     public DateTime DateSubmitted { get; set; }
     public string? SupportingDocumentPath { get; set; }
     public required string FilePath { get; set; }
+    public required string Description { get; set; } 
+    public DateTime DateFiled { get; set; }
+    public decimal Amount { get; set; }
 
     // Navigation property to link to Lecturer
     public required Lecturer Lecturer { get; set; }

@@ -8,6 +8,7 @@
     public decimal RatePerHour { get; set; }
     public DateTime DateSubmitted { get; set; }
     public string? SupportingDocumentPath { get; set; }
+    public required string FilePath { get; set; }
 
     // Navigation property to link to Lecturer
     public required Lecturer Lecturer { get; set; }
